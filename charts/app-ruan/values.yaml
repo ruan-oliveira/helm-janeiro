@@ -99,3 +99,12 @@ readinessProbe:
   failureThreshold: 3
   periodSeconds: 10
   initialDelaySeconds: 10
+
+configMap:
+  enabled: true
+  name: ""
+  data:
+    VAR01: "01"
+    DATABASE: "MYSQL"
+    USER: "USER"
+    NOVA: "FAF"

@@ -45,6 +45,12 @@ spec:
           readinessProbe:
             {{- toYaml . | nindent 12 }}
           {{- end }}
+          ### configmap
+          {{- if .Values.configMap.enabled }}
+          envFrom: 
+          - configMapRef:
+              name: {{ .Values.configMap.name | default (include "app-ruan.fullname" .) }}
+          {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

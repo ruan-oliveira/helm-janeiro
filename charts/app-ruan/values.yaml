@@ -39,6 +39,7 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 80
+  targetPort: 80
 
 ingress:
   enabled: false
@@ -80,3 +81,21 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+
+### coisas novas
+livenessProbe:
+  httpGet:
+    path: /
+    port: http
+  failureThreshold: 3
+  periodSeconds: 10
+  initialDelaySeconds: 10
+
+readinessProbe:
+  httpGet:
+    path: /
+    port: http
+  failureThreshold: 3
+  periodSeconds: 10
+  initialDelaySeconds: 10

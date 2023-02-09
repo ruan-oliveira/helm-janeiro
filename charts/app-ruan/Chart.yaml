@@ -2,7 +2,7 @@ apiVersion: v2
 name: app-ruan
 description: A Helm chart for Kubernetes
 type: application
-version: 0.1.0
+version: 0.2.0
 appVersion: "1.16.0"
 icon: https://www.nginx.com/wp-content/uploads/2017/09/NGINX-Plus_product-page-hero.png
 # icon: file://..

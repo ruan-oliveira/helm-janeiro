@@ -108,3 +108,8 @@ configMap:
     DATABASE: "MYSQL"
     USER: "USER"
     NOVA: "FAF"
+
+grafana:
+  enabled: false
+  adminUser: ruan
+  adminPassword: "passowrd"

@@ -9,4 +9,5 @@ icon: https://www.nginx.com/wp-content/uploads/2017/09/NGINX-Plus_product-page-h
 dependencies:
   - name: grafana
     repository: file://../commons/grafana
+    version: 6.50.5
     condition: grafana.enabled
